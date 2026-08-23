@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<article class="post-page">
+  <a class="back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a>
 
-<div class="post">
-  {{ content }}
-</div>
+  <header class="post-header">
+    <p class="post-meta">{{ page.date | date: "%Y年%-m月%-d日" }}</p>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

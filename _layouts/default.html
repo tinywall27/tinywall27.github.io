@@ -1,34 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>{{ page.title }}</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title | default: site.name }}</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-  
+    <script>
+      (function () {
+        try {
+          var savedTheme = window.localStorage.getItem('site-theme');
+          if (savedTheme === 'dark' || savedTheme === 'light') {
+            document.documentElement.dataset.theme = savedTheme;
+          }
+        } catch (error) {}
+      }());
+    </script>
   </head>
-
-
   <body>
-    <nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/cv">CV</a></li>
-<li><a href="/blog">Blog</a></li>
-</ul>
-    </nav>
-<div class="container">
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="site-name" href="{{ '/' | relative_url }}">{{ site.name }}</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换到黑色模式" aria-pressed="false">黑色模式</button>
+      </header>
 
-  {{ content }}
+      <main class="site-main">
+        {{ content }}
+      </main>
+    </div>
 
-</div>
-  
-  <footer>
-   <ul>
-   <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-   <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-   </ul>
-  </footer>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var button = document.getElementById('theme-toggle');
+
+        if (!button) return;
+
+        function applyTheme(theme) {
+          var isDark = theme === 'dark';
+          root.dataset.theme = isDark ? 'dark' : 'light';
+          button.textContent = isDark ? '白色模式' : '黑色模式';
+          button.setAttribute('aria-label', isDark ? '切换到白色模式' : '切换到黑色模式');
+          button.setAttribute('aria-pressed', String(isDark));
+        }
+
+        applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+        button.addEventListener('click', function () {
+          var nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          try {
+            window.localStorage.setItem('site-theme', nextTheme);
+          } catch (error) {}
+        });
+      }());
+    </script>
   </body>
-
 </html>

@@ -4,8 +4,6 @@ title: "Codex Skill 创建与目录指南"
 date: 2026-08-23
 ---
 
-# Codex Skill 创建与目录指南
-
 本文记录在 Codex 中创建 **全局 Skill** 和 **项目级 Skill** 的目录位置、终端命令及 VS Code 操作方法。
 
 ---

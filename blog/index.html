@@ -1,12 +1,6 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: 强强大作战AI学习备忘
 ---
-<h1>{{ page.title }}</h1>
-<ul class="posts">
-
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-  {% endfor %}
-    
-</ul>
+<h1 class="page-title">{{ page.title }}</h1>
+{% include post-list.html %}
