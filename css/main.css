@@ -9,6 +9,7 @@
   --accent-contrast: #ffffff;
   --code-background: #eeeeea;
   --shadow: 0 18px 45px rgba(25, 25, 20, 0.06);
+  --post-list-size: clamp(1.08rem, 2.2vw, 1.55rem);
 }
 
 html[data-theme="dark"] {
@@ -88,18 +89,9 @@ button { font: inherit; }
   opacity: 1;
 }
 
-.site-main { padding-top: 62px; }
+.site-main { padding-top: 34px; }
 
-.page-title {
-  max-width: 760px;
-  margin: 0;
-  font-size: clamp(2.4rem, 7vw, 4.8rem);
-  font-weight: 800;
-  letter-spacing: -0.065em;
-  line-height: 1.08;
-}
-
-.archive { margin-top: 70px; }
+.archive { margin-top: 0; }
 
 .archive-heading {
   display: flex;
@@ -112,7 +104,6 @@ button { font: inherit; }
 
 .archive-label,
 .archive-count,
-.post-card__meta,
 .post-meta {
   margin: 0;
   color: var(--muted);
@@ -125,7 +116,7 @@ button { font: inherit; }
 .archive-count { letter-spacing: 0; }
 
 .post-card {
-  padding: 30px 0 34px;
+  padding: 20px 0 24px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -137,13 +128,19 @@ button { font: inherit; }
 
 .post-card__meta {
   flex: 0 0 116px;
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--post-list-size);
+  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 .post-card__title {
   min-width: 0;
   max-width: 760px;
   margin: 0;
-  font-size: clamp(1.45rem, 3.2vw, 2.2rem);
+  font-size: var(--post-list-size);
+  font-weight: 750;
   letter-spacing: -0.035em;
   line-height: 1.3;
 }
@@ -152,10 +149,10 @@ button { font: inherit; }
 
 .post-card__excerpt {
   max-width: 720px;
-  margin: 10px 0 0 140px;
+  margin: 7px 0 0 140px;
   color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
 .empty-state { color: var(--muted); }
@@ -272,16 +269,14 @@ button { font: inherit; }
 }
 
 @media (max-width: 640px) {
+  :root { --post-list-size: 1.1rem; }
   .site-shell { width: min(100% - 28px, 920px); padding-top: 18px; }
-  .site-main { padding-top: 44px; }
-  .page-title { font-size: clamp(2.25rem, 12vw, 3.8rem); }
-  .archive { margin-top: 48px; }
+  .site-main { padding-top: 28px; }
   .archive-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
-  .post-card { padding: 25px 0 28px; }
-  .post-card__heading { gap: 12px; }
+  .post-card { padding: 18px 0 20px; }
+  .post-card__heading { gap: 10px; }
   .post-card__meta { flex-basis: 92px; }
-  .post-card__title { font-size: 1.25rem; }
-  .post-card__excerpt { margin-left: 104px; }
+  .post-card__excerpt { margin-left: 102px; }
   .post-page { width: 100%; }
   .back-link { margin-bottom: 36px; }
   .post-header { margin-bottom: 32px; }
