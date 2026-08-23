@@ -127,12 +127,13 @@ button { font: inherit; }
 }
 
 .post-card__meta {
-  flex: 0 0 116px;
+  flex: 0 0 140px;
   margin: 0;
   color: var(--muted);
   font-size: var(--post-list-size);
   letter-spacing: 0;
   line-height: 1.3;
+  white-space: nowrap;
 }
 
 .post-card__title {
@@ -149,10 +150,10 @@ button { font: inherit; }
 
 .post-card__excerpt {
   max-width: 720px;
-  margin: 7px 0 0 140px;
+  margin: 2px 0 0 160px;
   color: var(--muted);
   font-size: 0.94rem;
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .empty-state { color: var(--muted); }
@@ -275,8 +276,8 @@ button { font: inherit; }
   .archive-heading { align-items: flex-start; flex-direction: column; gap: 2px; }
   .post-card { padding: 18px 0 20px; }
   .post-card__heading { gap: 10px; }
-  .post-card__meta { flex-basis: 92px; }
-  .post-card__excerpt { margin-left: 102px; }
+  .post-card__meta { flex-basis: 104px; }
+  .post-card__excerpt { margin-left: 114px; }
   .post-page { width: 100%; }
   .back-link { margin-bottom: 36px; }
   .post-header { margin-bottom: 32px; }
