@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "本机 SSH 从零部署：HY2 + REALITY + WARP（ChatGPT / Grok）"
-date: 2026-08-26 10:35:00 +0800
+date: 2026-08-26 10:00:00 +0800
 ---
 
 这份文档把对话中确定的推荐形态，整理成本机通过 SSH 施工的步骤和命令参数。
