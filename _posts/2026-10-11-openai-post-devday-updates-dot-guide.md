@@ -146,7 +146,7 @@ Dot 对话本身不计入 ChatGPT 用量限制，但它启动或管理的 Work /
 
 9 月 30 日的文章还写着 Sol Ultrafast 将后续开放；**10 月 8 日这一状态已改变**。官方周报确认，GPT‑6.1 Sol Ultrafast 可用于 Codex 和 ChatGPT Work，适用 Pro 500 以及符合条件的 Enterprise / Edu；Enterprise 默认关闭，需要工作区负责人开启。[10 月 5–9 日周报](https://learn.chatgpt.com/docs/whats-new/october-5-9-2026)
 
-使用时先在支持的入口选择 GPT‑6.1 Sol，再选择账号提供的 Ultrafast 速度档位，并检查用量。没有入口时先核对套餐、客户端和管理员设置；其他自助套餐在当前开放范围内，即使购买 credits 也不会因此解锁 Ultrafast。[速度模式文档](https://learn.chatgpt.com/docs/agent-configuration/speed#ultrafast-mode)
+使用时先在支持的入口选择 GPT‑6.1 Sol，再选择账号提供的 Ultrafast 速度档位，并检查用量。没有入口时先核对套餐、客户端和管理员设置；当前其他自助套餐尚未开放 Ultrafast，购买 credits 也不会因此解锁。[速度模式文档](https://learn.chatgpt.com/docs/agent-configuration/speed#ultrafast-mode)
 
 ### 消耗倍率与速度提升分开看
 
