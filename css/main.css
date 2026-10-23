@@ -276,6 +276,7 @@ button { font: inherit; }
 
 .post-content th,
 .post-content td {
+  min-width: 160px;
   padding: 0.55rem 0.7rem;
   border: 1px solid var(--border);
   text-align: left;
