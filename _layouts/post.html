@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post-page">
+<article class="post-page{% if page.report %} post-page--report{% endif %}">
   <a class="back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a>
 
   <header class="post-header">
